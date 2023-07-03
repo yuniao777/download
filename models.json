@@ -1,0 +1,7 @@
+[
+    {
+        "name":"bulma_v1.safetensors",
+        "url":"https://civitai-delivery-worker-prod-2023-07-01.5ac0637cfd0766c97916cefa3764fbdf.r2.cloudflarestorage.com/115157/model/bulmaV1.GD39.safetensors?X-Amz-Expires=86400&response-content-disposition=attachment%3B%20filename%3D%22bulma_v1.safetensors%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=2fea663d76bd24a496545da373d610fc/20230703/us-east-1/s3/aws4_request&X-Amz-Date=20230703T054233Z&X-Amz-SignedHeaders=host&X-Amz-Signature=9d1680c4166b9ed08f373dc8e343ef97911c2320ecaffbcaf6fed47efc93e4e5",
+        "type":"Stable-diffusion"
+    }
+]
