@@ -47,3 +47,13 @@ for plugin in plugins:
     system('git clone '+plugin)
     src = plugin[plugin.rfind('/')+1:len(plugin)]
     shutil.copytree(src, sd, dirs_exist_ok=True)
+
+# 将默认语言改成中文
+shared = path.join(sd, 'modules', 'shared.py')
+f = open(shared, encoding='utf-8')
+content = f.read()
+content.replace('"localization": OptionInfo("None"', '"localization": OptionInfo("zh-Hans (Stable)"')
+
+
+# 常用插件列表
+"https://gitee.com/akegarasu/sd-webui-extensions/raw/master/index.json"
