@@ -72,4 +72,4 @@ donwloadPlugin()
 changeLanguage()
 
 # 常用插件列表
-"https://gitee.com/akegarasu/sd-webui-extensions/raw/master/index.json"
+# https://gitee.com/akegarasu/sd-webui-extensions/raw/master/index.json
