@@ -3,5 +3,10 @@
         "name":"darkSushiMixMix_225D.safetensors",
         "url":"https://civitai.com/api/download/models/93208",
         "type":"Stable-diffusion"
+    },
+    {
+        "name":"hanfu_v30.safetensors",
+        "url":"https://civitai.com/api/download/models/54777",
+        "type":"lora"
     }
 ]

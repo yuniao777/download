@@ -3,6 +3,7 @@ import requests
 import json
 from os import path, makedirs, system, getcwd
 import shutil
+import zipfile
 
 sd = path.join(path.dirname(getcwd()), 'stable-diffusion-webui')
 
@@ -49,13 +50,21 @@ def donwloadPlugin():
     f.close()
     plugins = json.loads(content)
     for plugin in plugins:
-        src = plugin[plugin.rfind('/')+1:len(plugin)]
-        if path.exists(src):
-            system('cd '+src)
-            system('git pull')
-            system('cd ..')
-        else:
-            system('git clone '+plugin)
+        src = plugin
+        print(plugin[0:8])
+        if plugin[0:8] == 'https://':
+            src = plugin[plugin.rfind('/')+1:len(plugin)]
+            if path.exists(src):
+                system('cd '+src)
+                system('git pull')
+                system('cd ..')
+            else:
+                system('git clone '+plugin)
+            if path.exists(src+'_'):
+                print('unzip '+src)
+                f = zipfile.ZipFile(src+'.zip')
+                f.extractall()
+                f.close()
         shutil.copytree(src, sd, dirs_exist_ok=True)
 
 def changeLanguage():
@@ -67,9 +76,9 @@ def changeLanguage():
     f.write(content)
     f.close()
 
-downloadModels()
+# downloadModels()
 donwloadPlugin()
-changeLanguage()
+# changeLanguage()
 
 # 常用插件列表
 # https://gitee.com/akegarasu/sd-webui-extensions/raw/master/index.json
