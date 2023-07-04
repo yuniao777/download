@@ -60,6 +60,7 @@ def donwloadPlugin():
 
 def changeLanguage():
     # 将默认语言改成中文
+    print('change default language success')
     shared = path.join(sd, 'modules', 'shared.py')
     f = open(shared, encoding='utf-8', mode='r')
     content = f.read()
