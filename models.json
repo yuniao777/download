@@ -7,6 +7,6 @@
     {
         "name":"hanfu_v30.safetensors",
         "url":"https://civitai.com/api/download/models/54777",
-        "type":"lora"
+        "type":"Lora"
     }
 ]
