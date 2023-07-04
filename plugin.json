@@ -1,4 +1,5 @@
 [
     "sdweb-easy-prompt-selector",
-    "https://github.com/hanamizuki-ai/stable-diffusion-webui-localization-zh_Hans"
+    "https://github.com/hanamizuki-ai/stable-diffusion-webui-localization-zh_Hans",
+    "https://github.com/kohya-ss/sd-webui-additional-networks"
 ]
