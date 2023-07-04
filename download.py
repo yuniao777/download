@@ -51,7 +51,6 @@ def donwloadPlugin():
     plugins = json.loads(content)
     for plugin in plugins:
         src = plugin
-        print(plugin[0:8])
         if plugin[0:8] == 'https://':
             src = plugin[plugin.rfind('/')+1:len(plugin)]
             if path.exists(src):
