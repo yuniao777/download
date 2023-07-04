@@ -1,8 +1,8 @@
 
 import requests
 import json
-from os import path, makedirs
-
+from os import path, makedirs, system, getcwd
+import shutil
 
 def getSize(length):
     utils = ['b', 'kb', 'Mb', 'Gb']
@@ -15,8 +15,7 @@ def getSize(length):
         idx = len(utils) - 1
     return str(length) + utils[idx]
 
-# print(getSize(10000))
-m = path.join(path.curdir, '..', 'stable-diffusion-webui', 'models')
+m = path.join(path.dirname(getcwd()), 'stable-diffusion-webui', 'models')
 f = open('./models.json', encoding='utf-8')
 content = f.read()
 modelsConfig = json.loads(content)
@@ -39,3 +38,12 @@ for info in modelsConfig:
                 pyFile.write(chunk)
                 print('\r当前下载: '+name+" 进度:%s/%s     "%(getSize(contentLength), getSize(fileLength)), flush=True, end='')
     print()
+
+sd = path.join(path.dirname(getcwd()), 'stable-diffusion-webui')
+f = open('./plugin.json', encoding='utf-8')
+content = f.read()
+plugins = json.loads(content)
+for plugin in plugins:
+    system('git clone '+plugin)
+    src = plugin[plugin.rfind('/')+1:len(plugin)]
+    shutil.copytree(src, sd, dirs_exist_ok=True)
