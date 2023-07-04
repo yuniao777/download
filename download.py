@@ -75,9 +75,9 @@ def changeLanguage():
     f.write(content)
     f.close()
 
-# downloadModels()
+downloadModels()
 donwloadPlugin()
-# changeLanguage()
+changeLanguage()
 
 # 常用插件列表
 # https://gitee.com/akegarasu/sd-webui-extensions/raw/master/index.json
