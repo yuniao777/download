@@ -60,13 +60,10 @@ def donwloadPlugin():
 
 def changeLanguage():
     # 将默认语言改成中文
-    print('change default language success')
-    shared = path.join(sd, 'modules', 'shared.py')
-    f = open(shared, encoding='utf-8', mode='r')
+    f = open('./ui_setting.json', encoding='utf-8', mode='r')
     content = f.read()
     f.close()
-    content = content.replace('"localization": OptionInfo("None"', '"localization": OptionInfo("zh-Hans (Stable)"')
-    f = open(shared, encoding='utf-8', mode='w')
+    f = open(path.join(sd, 'config.json'), encoding='utf-8', mode='w+')
     f.write(content)
     f.close()
 
