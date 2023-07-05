@@ -61,6 +61,9 @@ def donwloadPlugin():
             if path.exists(src):
                 print('path exists, ignore ' + src)
             else:
+                fold = './'
+                if plugin == 'https://github.com/DominikDoom/a1111-sd-webui-tagcomplete':
+                    fold = 'extensions/tag-autocomplete'
                 system('git clone '+plugin)
         shutil.copytree(src, sd, dirs_exist_ok=True, ignore=ignoreStyleFile)
 
