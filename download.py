@@ -3,7 +3,7 @@ import requests
 import json
 from os import path, makedirs, system, getcwd
 import shutil
-import zipfile
+
 
 sd = path.join(path.dirname(getcwd()), 'stable-diffusion-webui')
 
@@ -62,6 +62,8 @@ def donwloadPlugin():
             if not pdir == '' and not path.exists(pdir):
                 makedirs(pdir, exist_ok=True)
             system('git clone ' + url + ' ' + p)
+            while not path.dirname(p) == '':
+                p = path.dirname(p)
         shutil.copytree(p, sd, dirs_exist_ok=True, ignore=ignoreStyleFile)
 
 def applyConfig():
