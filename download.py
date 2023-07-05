@@ -58,11 +58,12 @@ def donwloadPlugin():
         src = plugin
         if plugin[0:8] == 'https://':
             src = plugin[plugin.rfind('/')+1:len(plugin)]
+            gitout = src
             if plugin == 'https://github.com/DominikDoom/a1111-sd-webui-tagcomplete':
-                src = 'a1111-sd-webui-tagcomplete/extensions/tag-autocomplete'
-                if not path.exists(path.dirname(src)):
-                    makedirs(path.dirname(src), exist_ok=True)
-            if path.exists(src):
+                gitout = 'a1111-sd-webui-tagcomplete/extensions/tag-autocomplete'
+                if not path.exists(path.dirname(gitout)):
+                    makedirs(path.dirname(gitout), exist_ok=True)
+            if path.exists(gitout):
                 print('path exists, ignore ' + src)
             else:
                 system('git clone '+plugin + ' ' + src)
