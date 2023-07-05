@@ -64,7 +64,7 @@ def donwloadPlugin():
                 fold = './'
                 if plugin == 'https://github.com/DominikDoom/a1111-sd-webui-tagcomplete':
                     fold = 'extensions/tag-autocomplete'
-                system('git clone '+plugin)
+                system('git clone '+plugin + ' ' + fold)
         shutil.copytree(src, sd, dirs_exist_ok=True, ignore=ignoreStyleFile)
 
 def applyConfig():
