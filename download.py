@@ -73,9 +73,15 @@ def applyConfig():
     f.write(content)
     f.close()
 
+def applyAutoTag():
+    shutil.copytree('extensions', path.join(sd, 'extensions'), dirs_exist_ok=True)
+
 downloadModels()
 donwloadPlugin()
+applyAutoTag()
 applyConfig()
+
+
 
 # 常用插件列表
 # https://gitee.com/akegarasu/sd-webui-extensions/raw/master/index.json
