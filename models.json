@@ -12,7 +12,7 @@
     {
         "name":"moonfilm_filmGrain10.safetensors",
         "url":"https://civitai.com/api/download/models/92475",
-        "type":"lora"
+        "type":"Stable-diffusion"
     },
     {
         "name":"chilloutmix_NiPrunedFp32Fix.safetensors",
