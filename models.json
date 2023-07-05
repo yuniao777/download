@@ -8,5 +8,10 @@
         "name":"hanfu_v30.safetensors",
         "url":"https://civitai.com/api/download/models/54777",
         "type":"Lora"
+    },
+    {
+        "name":"moonfilm_filmGrain10.safetensors",
+        "url":"https://civitai.com/api/download/models/92475",
+        "type":"Stable-diffusion"
     }
 ]

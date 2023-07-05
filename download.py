@@ -44,6 +44,11 @@ def downloadModels():
                     print('\r当前下载: '+name+" 进度:%s/%s     "%(getSize(contentLength), getSize(fileLength)), flush=True, end='')
         print()
 
+def ignoreStyleFile(path, files):
+    if files.count('style.css') > 0:
+        return ['style.css']
+    return []
+
 def donwloadPlugin():
     f = open('./plugin.json', encoding='utf-8')
     content = f.read()
@@ -54,19 +59,12 @@ def donwloadPlugin():
         if plugin[0:8] == 'https://':
             src = plugin[plugin.rfind('/')+1:len(plugin)]
             if path.exists(src):
-                system('cd '+src)
-                system('git pull')
-                system('cd ..')
+                print('path exists, ignore ' + src)
             else:
                 system('git clone '+plugin)
-            if path.exists(src+'_'):
-                print('unzip '+src)
-                f = zipfile.ZipFile(src+'.zip')
-                f.extractall()
-                f.close()
-        shutil.copytree(src, sd, dirs_exist_ok=True)
+        shutil.copytree(src, sd, dirs_exist_ok=True, ignore=ignoreStyleFile)
 
-def changeLanguage():
+def applyConfig():
     # 将默认语言改成中文
     f = open('./ui_setting.json', encoding='utf-8', mode='r')
     content = f.read()
@@ -77,7 +75,7 @@ def changeLanguage():
 
 downloadModels()
 donwloadPlugin()
-changeLanguage()
+applyConfig()
 
 # 常用插件列表
 # https://gitee.com/akegarasu/sd-webui-extensions/raw/master/index.json
