@@ -62,7 +62,11 @@ def donwloadPlugin():
             if not pdir == '' and not path.exists(pdir):
                 makedirs(pdir, exist_ok=True)
             system('git clone ' + url + ' ' + p)
-        shutil.copytree(p, path.join(path.dirname(getcwd()), p), dirs_exist_ok=True, ignore=ignoreStyleFile)
+        if path.dirname(p) == '':
+            dst = sd
+        else :
+            dst = path.join(path.dirname(getcwd()), p)
+        shutil.copytree(p, dst, dirs_exist_ok=True, ignore=ignoreStyleFile)
 
 def applyConfig():
     # 将默认语言改成中文
