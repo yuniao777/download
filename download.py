@@ -55,19 +55,14 @@ def donwloadPlugin():
     f.close()
     plugins = json.loads(content)
     for plugin in plugins:
-        src = plugin
-        if plugin[0:8] == 'https://':
-            src = plugin[plugin.rfind('/')+1:len(plugin)]
-            gitout = src
-            if plugin == 'https://github.com/DominikDoom/a1111-sd-webui-tagcomplete':
-                gitout = 'a1111-sd-webui-tagcomplete/extensions/tag-autocomplete'
-                if not path.exists(path.dirname(gitout)):
-                    makedirs(path.dirname(gitout), exist_ok=True)
-            if path.exists(gitout):
-                print('path exists, ignore ' + src)
-            else:
-                system('git clone '+plugin + ' ' + gitout)
-        shutil.copytree(src, sd, dirs_exist_ok=True, ignore=ignoreStyleFile)
+        url = plugin['url']
+        p = plugin['path']
+        if url[0:8] == 'https://':
+            pdir = path.dirname(p)
+            if not pdir == '' and not path.exists(pdir):
+                makedirs(pdir, exist_ok=True)
+            system('git clone ' + url + ' ' + p)
+        shutil.copytree(p, sd, dirs_exist_ok=True, ignore=ignoreStyleFile)
 
 def applyConfig():
     # 将默认语言改成中文
@@ -80,14 +75,13 @@ def applyConfig():
 
 def applyAutoTag():
     t = path.join(sd, 'extensions', 'tag-autocomplete', 'tags')
-    shutil.copy('zh_cn.csv', t)
+    if path.exists(t):
+        shutil.copy('zh_cn.csv', t)
 
 downloadModels()
 donwloadPlugin()
 applyAutoTag()
 applyConfig()
-
-
 
 # 常用插件列表
 # https://gitee.com/akegarasu/sd-webui-extensions/raw/master/index.json

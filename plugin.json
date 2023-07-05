@@ -1,6 +1,22 @@
 [
-    "sdweb-easy-prompt-selector",
-    "https://github.com/hanamizuki-ai/stable-diffusion-webui-localization-zh_Hans",
-    "https://github.com/kohya-ss/sd-webui-additional-networks",
-    "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete"
+    {
+        "path":"sdweb-easy-prompt-selector",
+        "url":"sdweb-easy-prompt-selector"
+    },
+    {
+        "path":"stable-diffusion-webui-localization-zh_Hans",
+        "url":"https://github.com/hanamizuki-ai/stable-diffusion-webui-localization-zh_Hans"
+    },
+    {
+        "path":"sd-webui-additional-networks",
+        "url":"https://github.com/kohya-ss/sd-webui-additional-networks"
+    },
+    {
+        "path":"sd/extensions/tag-autocomplete",
+        "url":"https://github.com/DominikDoom/a1111-sd-webui-tagcomplete"
+    },
+    {
+        "path":"sd/extensions/tagger",
+        "url":"https://github.com/toriato/stable-diffusion-webui-wd14-tagger"
+    }
 ]
