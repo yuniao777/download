@@ -26,5 +26,9 @@
     {
         "path":"stable-diffusion-webui/extensions/sd-webui-controlne",
         "url":"https://github.com/Mikubill/sd-webui-controlnet"
+    },
+    {
+        "path":"stable-diffusion-webui/extensions/sd-dynamic-prompts",
+        "url":"https://github.com/adieyal/sd-dynamic-prompts"
     }
 ]
