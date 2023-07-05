@@ -79,6 +79,9 @@ def applyAutoTag():
     t = path.join(sd, 'extensions', 'tag-autocomplete', 'tags')
     if path.exists(t):
         shutil.copy('zh_cn.csv', t)
+    t = path.join(sd, 'extensions', 'sdweb-easy-prompt-selector', 'tags')
+    if path.exists(t):
+        shutil.copytree('sdweb-easy-prompt-selector-tags', t)
 
 downloadModels()
 donwloadPlugin()

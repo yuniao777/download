@@ -1,7 +1,7 @@
 [
     {
-        "path":"local_plugin/sdweb-easy-prompt-selector",
-        "url":"sdweb-easy-prompt-selector"
+        "path":"sd/extensions/sdweb-easy-prompt-selector",
+        "url":"https://github.com/ouyanganjing/sdweb-easy-prompt-selector"
     },
     {
         "path":"stable-diffusion-webui-localization-zh_Hans",
