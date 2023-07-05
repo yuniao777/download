@@ -12,6 +12,21 @@
     {
         "name":"moonfilm_filmGrain10.safetensors",
         "url":"https://civitai.com/api/download/models/92475",
+        "type":"lora"
+    },
+    {
+        "name":"chilloutmix_NiPrunedFp32Fix.safetensors",
+        "ur":"https://civitai.com/api/download/models/11745",
         "type":"Stable-diffusion"
+    },
+    {
+        "name":"mix4.safetensors",
+        "url":"https://civitai.com/api/download/models/16677",
+        "type":"lora"
+    },
+    {
+        "name":"irene_v70.safetensors",
+        "url":"https://civitai.com/api/download/models/20090",
+        "type":"lora"
     }
 ]
