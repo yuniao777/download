@@ -58,13 +58,14 @@ def donwloadPlugin():
         src = plugin
         if plugin[0:8] == 'https://':
             src = plugin[plugin.rfind('/')+1:len(plugin)]
+            if plugin == 'https://github.com/DominikDoom/a1111-sd-webui-tagcomplete':
+                src = 'a1111-sd-webui-tagcomplete/extensions/tag-autocomplete'
+                if not path.exists(path.dirname(src)):
+                    makedirs(path.dirname(src), exist_ok=True)
             if path.exists(src):
                 print('path exists, ignore ' + src)
             else:
-                fold = ''
-                if plugin == 'https://github.com/DominikDoom/a1111-sd-webui-tagcomplete':
-                    fold = 'extensions/tag-autocomplete'
-                system('git clone '+plugin + ' ' + fold)
+                system('git clone '+plugin + ' ' + src)
         shutil.copytree(src, sd, dirs_exist_ok=True, ignore=ignoreStyleFile)
 
 def applyConfig():
@@ -77,9 +78,9 @@ def applyConfig():
     f.close()
 
 def applyAutoTag():
-    shutil.copytree('extensions', path.join(sd, 'extensions'), dirs_exist_ok=True)
+    shutil.copyfile('zh_cn.csv', path.join(sd, path.join(sd, 'extensions', 'tag-autocomplete')), dirs_exist_ok=True)
 
-downloadModels()
+# downloadModels()
 donwloadPlugin()
 applyAutoTag()
 applyConfig()
