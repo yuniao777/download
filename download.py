@@ -80,7 +80,7 @@ def applyConfig():
 
 def applyAutoTag():
     t = path.join(sd, 'extensions', 'tag-autocomplete', 'tags')
-    shutil.copyfile('zh_cn.csv', t)
+    shutil.copy('zh_cn.csv', t)
 
 downloadModels()
 donwloadPlugin()
