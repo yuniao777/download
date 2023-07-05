@@ -28,5 +28,10 @@
         "name":"irene_v70.safetensors",
         "url":"https://civitai.com/api/download/models/20090",
         "type":"lora"
+    },
+    {
+        "name":"asianGirlsFace_v1.safetensors",
+        "url":"https://civitai.com/api/download/models/67325",
+        "type":"lora"
     }
 ]
