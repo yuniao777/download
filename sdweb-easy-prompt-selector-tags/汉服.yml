@@ -1,6 +1,6 @@
 唐风:
   上杉:
-    召唤唐风: hanfu, tang style outfits,<lora:hanfu_v30:0.4>
+    召唤唐风: hanfu, tang style outfits
     橙色上杉: orange upper shan
     红色上杉: red upper shan
     绿色上杉: green upper shan
@@ -89,7 +89,7 @@
 
 宋风:
   短衫:
-    召唤宋风: hanfu, song style outfits,<lora:hanfu_v30:0.4>
+    召唤宋风: hanfu, song style outfits
     紫色短杉: purple short shan
     红色短杉: red short shan
     绿色短杉: green short shan
@@ -151,7 +151,7 @@
 
 明风:
   上衣:
-    召唤明风: hanfu, ming style outfits,<lora:hanfu_v30:0.4>
+    召唤明风: hanfu, ming style outfits
     短袄: short coat
     长袄: long coat
   裙子:
