@@ -66,7 +66,7 @@ def donwloadPlugin():
             if path.exists(gitout):
                 print('path exists, ignore ' + src)
             else:
-                system('git clone '+plugin + ' ' + src)
+                system('git clone '+plugin + ' ' + gitout)
         shutil.copytree(src, sd, dirs_exist_ok=True, ignore=ignoreStyleFile)
 
 def applyConfig():
