@@ -10,11 +10,6 @@
         "type":"lora"
     },
     {
-        "name":"moonfilm_filmGrain10.safetensors",
-        "url":"https://civitai.com/api/download/models/92475",
-        "type":"Stable-diffusion"
-    },
-    {
         "name":"chilloutmix_NiPrunedFp32Fix.safetensors",
         "url":"https://civitai.com/api/download/models/11745",
         "type":"Stable-diffusion"
@@ -33,5 +28,10 @@
         "name":"asianGirlsFace_v1.safetensors",
         "url":"https://civitai.com/api/download/models/67325",
         "type":"lora"
+    },
+    {
+        "name":"meinapastel_v6Pastel.safetensors",
+        "url":"https://civitai.com/api/download/models/108289",
+        "type":"Stable-diffusion"
     }
 ]
