@@ -5,11 +5,6 @@
         "type":"Stable-diffusion"
     },
     {
-        "name":"hanfu_v30.safetensors",
-        "url":"https://civitai.com/api/download/models/54777",
-        "type":"lora"
-    },
-    {
         "name":"chilloutmix_NiPrunedFp32Fix.safetensors",
         "url":"https://civitai.com/api/download/models/11745",
         "type":"Stable-diffusion"
