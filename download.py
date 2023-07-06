@@ -85,7 +85,7 @@ def applyAutoTag():
     if path.exists(t):
         shutil.copytree('sdweb-easy-prompt-selector-tags', t, dirs_exist_ok=True)
 
-# downloadModels()
+downloadModels()
 donwloadPlugin()
 applyAutoTag()
 applyConfig()
