@@ -1,32 +1,17 @@
 [
     {
-        "name":"darkSushiMixMix_225D.safetensors",
-        "url":"https://civitai.com/api/download/models/93208",
+        "name":"fantasyWorld_v1.safetensors",
+        "url":"https://civitai.com/api/download/models/13069",
         "type":"Stable-diffusion"
     },
     {
-        "name":"chilloutmix_NiPrunedFp32Fix.safetensors",
-        "url":"https://civitai.com/api/download/models/11745",
+        "name":"AnythingV5Ink_ink.safetensors",
+        "url":"https://civitai.com/api/download/models/90854",
         "type":"Stable-diffusion"
     },
     {
-        "name":"mix4.safetensors",
-        "url":"https://civitai.com/api/download/models/16677",
-        "type":"lora"
-    },
-    {
-        "name":"irene_v70.safetensors",
-        "url":"https://civitai.com/api/download/models/20090",
-        "type":"lora"
-    },
-    {
-        "name":"asianGirlsFace_v1.safetensors",
-        "url":"https://civitai.com/api/download/models/67325",
-        "type":"lora"
-    },
-    {
-        "name":"meinapastel_v6Pastel.safetensors",
-        "url":"https://civitai.com/api/download/models/108289",
+        "name":"CounterfeitV30_v30.safetensors",
+        "url":"https://civitai.com/api/download/models/57618",
         "type":"Stable-diffusion"
     }
 ]
